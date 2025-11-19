@@ -5,7 +5,6 @@ const heroPhotos = ['/media/name-photos/1.png']
 
 function HomePage() {
   const spotlightProjects = projects.slice(0, 6)
-  const archiveProjects = projects.slice(6)
 
   return (
     <section className="home" aria-label="Featured work">
@@ -43,32 +42,10 @@ function HomePage() {
       <div className="home-projects" id="projects">
         <div className="section-header">
           <p className="home-hero__eyebrow">Selected work</p>
-          <h2>Systems engineered with equal parts rigor and play</h2>
-          <p>
-            These are the projects people ask about most often during portfolio walks —
-            spanning robotics, AI, research, education, and delightful tools for thought.
-          </p>
         </div>
 
         <div className="project-grid">
           {spotlightProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      </div>
-
-      <div className="home-projects" aria-label="Project archive">
-        <div className="section-header">
-          <p className="home-hero__eyebrow">Archive</p>
-          <h2>Everything else still on rotation</h2>
-          <p>
-            The remaining experiments from xrarchitect.xyz stay available for quick
-            reference while we wire up dedicated detail pages.
-          </p>
-        </div>
-
-        <div className="project-grid">
-          {archiveProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

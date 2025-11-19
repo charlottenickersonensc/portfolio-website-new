@@ -7,10 +7,6 @@ function HomePage() {
   return (
     <section className="home" aria-label="Featured work">
       <div className="home-projects" id="projects">
-        <div className="section-header">
-          <p className="home-hero__eyebrow">Selected work</p>
-        </div>
-
         <div className="project-grid">
           {spotlightProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />

@@ -372,7 +372,7 @@ button:disabled,
   width: 100%;
   margin: 0 0 1rem;
   border: 1px solid rgba(17, 16, 16, 0.25);
-  box-shadow: 0 20px 40px rgba(6, 6, 6, 0.25);
+  box-shadow: none;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: pointer;
   break-inside: avoid;
@@ -380,7 +380,7 @@ button:disabled,
 
 .theme-dark .project-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.65);
+  box-shadow: none;
 }
 
 .project-card:focus-visible {

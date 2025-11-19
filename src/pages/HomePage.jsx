@@ -1,8 +1,7 @@
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
 
-const heroPhotos = ['/media/name-photos/1.png', '/media/name-photos/2.png']
-const focusAreas = ['Robotics', 'AI + ML', 'AR + Spatial', 'Systems Design', 'Interaction Design']
+const heroPhotos = ['/media/name-photos/1.png']
 
 function HomePage() {
   const spotlightProjects = projects.slice(0, 6)
@@ -32,20 +31,6 @@ function HomePage() {
             </a>
           </div>
 
-          <ul className="home-hero__stats">
-            <li>
-              <span>20k+</span>
-              <small>People touched by installations</small>
-            </li>
-            <li>
-              <span>{projects.length}</span>
-              <small>Shipped initiatives</small>
-            </li>
-            <li>
-              <span>8 yrs</span>
-              <small>Prototyping future interfaces</small>
-            </li>
-          </ul>
         </div>
 
         <div className="home-hero__photos" aria-hidden>
@@ -53,14 +38,6 @@ function HomePage() {
             <img key={src} src={src} alt="Charlotte Anne Nickerson" data-index={index} />
           ))}
         </div>
-      </div>
-
-      <div className="focus-grid">
-        {focusAreas.map((area) => (
-          <div key={area} className="focus-grid__item">
-            <p>{area}</p>
-          </div>
-        ))}
       </div>
 
       <div className="home-projects" id="projects">

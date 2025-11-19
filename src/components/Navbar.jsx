@@ -43,7 +43,7 @@ function Navbar({ theme = 'light', onToggleTheme = () => {} }) {
             </li>
             <li>
               <NavLink to="/play" className={linkClass}>
-                Play
+                Publications
               </NavLink>
             </li>
             <li>

@@ -9,14 +9,14 @@ function ProjectCard({ project }) {
     image,
     staticImage,
     type,
-    year,
-    status,
+    roles,
   } = project
 
   const shouldUseVideo = type === 'video' || image.endsWith('.mp4')
 
   return (
-    <Link to={`/project/${id}`} className="project-card">
+    <Link to={`/project/${id}`} className="project-card" aria-label={`View ${title}`}>
+      <span className="sr-only">{overview}</span>
       <div className="project-card__media" aria-hidden>
         {shouldUseVideo ? (
           <video
@@ -26,20 +26,19 @@ function ProjectCard({ project }) {
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
           />
         ) : (
-          <img src={image} alt="" />
+          <img src={image} alt="" loading="lazy" />
         )}
-      </div>
 
-      <div className="project-card__body">
-        <p className="project-card__category">{category}</p>
-        <h3 className="project-card__title">{title}</h3>
-        <p className="project-card__summary">{overview}</p>
-        <p className="project-card__meta">
-          {year} • {status}
-        </p>
+        <div className="project-card__overlay">
+          <p className="project-card__category">{category}</p>
+          <h3 className="project-card__title">{title}</h3>
+          {roles?.length ? (
+            <p className="project-card__roles">{roles.join(', ')}</p>
+          ) : null}
+        </div>
       </div>
     </Link>
   )

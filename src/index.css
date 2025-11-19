@@ -40,8 +40,8 @@ body {
 }
 
 .theme-dark .site-header {
-  background: rgba(6, 6, 6, 0.9);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border-color: transparent;
 }
 
 .theme-dark .site-header__theme {
@@ -127,8 +127,8 @@ button:disabled,
   top: 0;
   z-index: 20;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(18, 18, 18, 0.08);
-  background: linear-gradient(180deg, rgba(246, 243, 237, 0.92), rgba(246, 243, 237, 0.85));
+  border-bottom: none;
+  background: transparent;
 }
 
 .site-header__inner {
@@ -227,25 +227,6 @@ button:disabled,
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-.site-header__social {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.site-header__social a {
-  padding: 0.3rem;
-  border-radius: 999px;
-  color: inherit;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.site-header__social a:hover,
-.site-header__social a:focus-visible {
-  background-color: rgba(22, 21, 19, 0.08);
-  transform: translateY(-1px);
 }
 
 .site-header__theme {

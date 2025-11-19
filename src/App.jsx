@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import PlayPage from './pages/PlayPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
+import AboutPage from './pages/AboutPage'
 import NotFoundPage from './pages/NotFoundPage'
 import './App.css'
 
@@ -32,6 +33,7 @@ function App() {
       <main className="app-main">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/project/:id" element={<ProjectDetailPage />} />
           <Route path="/play" element={<PlayPage />} />
           <Route path="*" element={<NotFoundPage />} />

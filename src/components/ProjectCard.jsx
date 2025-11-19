@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom'
+
 function ProjectCard({ project }) {
   const {
+    id,
     title,
     category,
     overview,
@@ -13,7 +16,7 @@ function ProjectCard({ project }) {
   const shouldUseVideo = type === 'video' || image.endsWith('.mp4')
 
   return (
-    <article className="project-card">
+    <Link to={`/project/${id}`} className="project-card">
       <div className="project-card__media" aria-hidden>
         {shouldUseVideo ? (
           <video
@@ -38,7 +41,7 @@ function ProjectCard({ project }) {
           {year} • {status}
         </p>
       </div>
-    </article>
+    </Link>
   )
 }
 

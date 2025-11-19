@@ -47,8 +47,13 @@ function Navbar({ theme = 'light', onToggleTheme = () => {} }) {
               </NavLink>
             </li>
             <li>
-              <a className="site-nav__link" href="/media/Ian-Curtis-Resume.pdf" target="_blank" rel="noreferrer">
+              <NavLink to="/about" className={linkClass}>
                 About
+              </NavLink>
+            </li>
+            <li>
+              <a className="site-nav__link" href="/media/Ian-Curtis-Resume.pdf" target="_blank" rel="noreferrer">
+                Resume
               </a>
             </li>
           </ul>

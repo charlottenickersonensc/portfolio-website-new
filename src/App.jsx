@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import PlayPage from './pages/PlayPage'
+import ProjectDetailPage from './pages/ProjectDetailPage'
 import NotFoundPage from './pages/NotFoundPage'
 import './App.css'
 
@@ -31,6 +32,7 @@ function App() {
       <main className="app-main">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/project/:id" element={<ProjectDetailPage />} />
           <Route path="/play" element={<PlayPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

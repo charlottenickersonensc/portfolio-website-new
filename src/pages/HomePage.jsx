@@ -5,7 +5,7 @@ function HomePage() {
   const spotlightProjects = projects.slice(0, 6)
 
   return (
-    <section className="home" aria-label="Featured work">
+    <section className="home home--has-topography" aria-label="Featured work">
       <div className="home-projects" id="projects">
         <div className="project-grid">
           {spotlightProjects.map((project) => (

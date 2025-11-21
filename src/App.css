@@ -12,3 +12,15 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  background-color: #f6f3ed;
+}
+
+.app-shell > *:not(.projects-topography__canvas) {
+  position: relative;
+  z-index: 1;
+}
